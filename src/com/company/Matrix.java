@@ -25,6 +25,14 @@ public class Matrix {
         }
     }
 
+    public int getSorokSzama() {
+        return sorokSzama;
+    }
+
+    public int getOszlopokSzama() {
+        return oszlopokSzama;
+    }
+
     public boolean isSquare() {
         return this.sorokSzama == this.oszlopokSzama;
     }
