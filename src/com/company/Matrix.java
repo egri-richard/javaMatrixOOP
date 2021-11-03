@@ -3,9 +3,9 @@ package com.company;
 import java.util.Arrays;
 
 public class Matrix {
-    private int sorokSzama;
-    private int oszlopokSzama;
-    private int[][] matrix;
+    protected int sorokSzama;
+    protected int oszlopokSzama;
+    protected int[][] matrix;
 
     public Matrix(int sorokSzama, int oszlopokSzama) {
         this.sorokSzama = sorokSzama;
@@ -18,6 +18,10 @@ public class Matrix {
         this.oszlopokSzama = (int)(Math.random()*11)+5;
         this.matrix = new int[sorokSzama][oszlopokSzama];
 
+        this.fill();
+    }
+
+    protected void fill() {
         for (int i=0; i<sorokSzama; i++) {
             for (int j=0; j<oszlopokSzama; j++) {
                 this.matrix[i][j] = (int)(Math.random()* 90)+10;
